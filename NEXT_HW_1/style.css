@@ -1,0 +1,71 @@
+body {
+  background-color: #222;
+}
+a:visited {
+  color: #222;
+}
+mark {
+  color: #222;
+  background: yellow;
+}
+li {
+  color: rgba(255, 255, 255, 1);
+}
+img {
+  width: 100%;
+}
+.container {
+  width: 88%;
+  color: white;
+  /* background-color: aliceblue; */
+  margin: 0 auto;
+  border: 5px solid #f7941e;
+  padding: 40px;
+  border-radius: 15%;
+  margin: 60px;
+  max-width: 150%;
+}
+#contentWrapper {
+  max-width: 430px;
+
+  margin: 0 auto;
+}
+p {
+  font-size: 20px;
+  font-weight: 700;
+}
+b {
+  color: #f7941e;
+}
+h3 {
+  text-align: center;
+}
+.noDot {
+  list-style: none;
+  padding-top: 300px;
+}
+
+[href] {
+  color: orange
+}
+
+img[src*='https://postfiles.pstatic.net/MjAyNDAyMTVfMjYy/MDAxNzA3OTIzNTkxOTg4.6qOmJ2lkJUyuOQXuMNk6o4rp2GvsF6_-4GsYhrrpJd0g.-Rj2kpjMrtqrEQEl-IBe7OMWXmcYvOyx64U-oLcndnAg.JPEG.kyhjong0512/IMG_4332.jpeg?type=w773'] {
+  height: 60%;
+  width: 60%;
+  text-align: center;
+}
+
+a:visited {
+  color: green
+}
+
+* {
+  font-family: font-family:'NEXON Lv1 Gothic OTF';
+}
+
+@font-face {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
