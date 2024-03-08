@@ -1,0 +1,285 @@
+body {
+  background-color: white;
+  box-sizing: border-box;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.container1 {
+  display: flex;
+  height: 5vh;
+  padding-bottom: 5%;
+}
+
+.container1-1 {
+  display: flex;
+  flex-grow: 3;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 130%;
+  font-weight: bolder;
+}
+
+.expandmore {
+  position: relative;
+  top: 4px;
+}
+
+.dot {
+  width: 5vh;
+  position: relative;
+  right: 8px;
+  bottom: 1px;
+  filter: invert(20%) sepia(55%) saturate(7348%) hue-rotate(355deg) brightness(99%) contrast(129%);
+}
+
+
+.container1-2 {
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 2;
+  align-items: center;
+}
+
+#plusicon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  top: 0.5px;
+}
+
+.container2 {
+  display: flex;
+  height: 15vh;
+}
+
+.container2-1 {
+  flex-grow: 3;
+  font-weight: bolder;
+}
+
+.profileimg {
+}
+
+.mypic {
+  height: 15vh;
+  border-radius: 100%;
+}
+
+.name {
+  font-weight: bolder;
+}
+
+.container2-2 {
+  display: flex;
+  flex-grow: 7;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.followers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.followings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.container3 {
+  display: flex;
+  font-weight: bolder;
+  height: 5vh;
+  align-items: center;
+}
+
+.link {
+  transform: rotate(135deg);
+  display: flex;
+}
+
+.container4 {
+  display: flex;
+  height: 7vh;
+  align-items: center;
+}
+
+.profileedit {
+  position: relative;
+  flex-grow: 5;
+  text-align: center;
+  font-weight: bolder;
+  background-color: rgb(222, 222, 222);
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-right: 0.5%;
+}
+
+.profileshare {
+  position: relative;
+  flex-grow: 5;
+  text-align: center;
+  font-weight: bolder;
+  background-color: rgb(222, 222, 222);
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+}
+
+.personadd {
+  position: relative;
+  flex-grow: 1;
+  background-color: rgb(222, 222, 222);
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  margin-left: 0.5%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  align-items: center;
+  justify-content: center;
+}
+
+.personaddimg {
+  position: relative;
+  left: 12.5px;
+  top: 1px;
+}
+
+.container5 {
+  display: flex;
+  height: 10vh;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.grid {
+  width: 4vw;
+}
+
+.video {
+  width: 4vw;
+}
+
+.assignment {
+  width: 5vw;
+}
+
+.line {
+  display: flex;
+  }
+
+.line1 {
+  display: flex;
+  position: relative;
+  border: 1px solid black;
+  flex-grow: 1;
+}  
+
+.line2 {
+  display: flex;
+  position: relative;
+  border: 1px solid rgb(222, 222, 222);
+  flex-grow: 1;
+}  
+
+.line3 {
+  display: flex;
+  position: relative;
+  border: 1px solid rgb(222, 222, 222);
+  flex-grow: 1;
+}  
+
+.container6 {
+  display: flex;
+  height: 90vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cameracover {
+  border: 2px solid black;
+  border-radius: 100%;
+}
+
+img.camera {
+  position: flex;
+  width: 10vh;
+  height: 10vh;
+  top: 1px;
+}
+
+.nopost {
+  font-weight: bolder;
+}
+
+.container7 {
+  display: flex;
+  height: 8vh;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.fhome {
+  position: relative;
+  width: 6vw;
+}
+
+.fsearch {
+  position: relative;
+  width: 6vw;
+}
+
+.fplus {
+  position: relative;
+  height: 5vh;
+}
+
+.fvideo {
+  position: relative;
+  width: 5vw;
+}
+
+.fmypiccover {
+  display: flex;
+  flex-direction: column;
+}
+
+.fmypic {
+  position: relative;
+  width: 4vw;
+  height: 4vh;
+  top: 4px;
+  border: 2px solid black;
+  border-radius: 100%;
+}
+
+.fdot {
+  position: relative;
+  filter: invert(20%) sepia(55%) saturate(7348%) hue-rotate(355deg) brightness(99%) contrast(129%);
+  height: 2.5vh;
+  top: 1px;
+}
