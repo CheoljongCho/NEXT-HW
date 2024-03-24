@@ -1,0 +1,482 @@
+body {
+  margin: 0%;
+}
+
+#KBimg {
+  width: 11%;
+  margin-right: 5%;
+}
+
+#TBimg {
+  width: 11%;
+  margin-right: 5%;
+}
+
+#IVimg {
+  width: 12%;
+  margin-right: 4%;
+}
+
+.addp {
+  font-size: 23px;
+  font-weight: bold;
+  color: #505460;
+}
+
+#newlist {
+  color: #3F80E4;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+div {
+  display: flex;
+}
+
+header {
+  box-sizing: border-box;
+  display: flex;
+  width: 828px;
+  height: 110px;
+  background-color: #F3F4F6;
+  position: fixed;
+  align-items: center;
+  padding-left: 45px;
+}
+
+.headerright {
+  width: 15%;
+}
+
+.logo {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  font-size: 45px;
+  font-weight: bold;
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#mainlogo {
+  width: 100%;
+}
+
+.scr {
+  box-sizing: border-box;
+  background-color:#F3F4F6;
+  width: 828px;
+  height: 1792px;
+  padding-top: 110px;
+  padding-bottom: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5%;
+}
+
+.tsb {
+  box-sizing: content-box;
+  width: 92%;
+  height: auto;
+  background-color :rgb(255, 255, 255);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.tsbname {
+  display: flex;
+  margin-left: 45px;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  font-size: 35px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.tsbmore{
+  display: flex;
+  margin-right: 45px;
+  font-size: 35px;
+  font-weight: bold;
+  color: #B7BBBE;
+}
+
+.BankList {
+  box-sizing: content-box;
+  width: 92%;
+  height: auto;
+  background-color :rgb(255, 255, 255);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  margin-top: 3px;
+  margin-bottom: 0;
+  font-weight: lighter;
+  font-size: 23px;
+}
+
+.stats {
+  margin-top: 7px;
+  height:100%;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+p.stats {
+  margin-bottom: 0;
+}
+
+.KB {
+  box-sizing: content-box;
+  width: auto;
+  height: auto;
+  background-color :rgb(255, 255, 255);
+  border-radius: 30px;
+  display: flex;
+  margin-top: 45px;
+  margin-bottom: 2.5%;
+  margin-left: 45px;
+  margin-right: 45px;
+  align-items: center;
+}
+
+.KBstat {
+  box-sizing: content-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+div.Send {
+  box-sizing: content-box;
+  display: flex;
+  width: 150px;
+  height: 64px;
+  background-color :#F1F2F4;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.TB {
+  box-sizing: content-box;
+  width: auto;
+  height: auto;
+  background-color :rgb(255, 255, 255);
+  border-radius: 30px;
+  display: flex;
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  align-items: center;
+}
+
+.TBstat {
+  box-sizing: content-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Invest {
+  box-sizing: content-box;
+  width: auto;
+  height: auto;
+  background-color :rgb(255, 255, 255);
+  display: flex;
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-top: 2.5%;
+  padding-bottom: 2.5%;
+  align-items: center;
+  border-bottom: 2px solid rgb(241, 241, 243)
+}
+
+.IVstat {
+  width: 100%;
+  flex-direction: column;
+}
+
+.lss {
+  margin-bottom: 0px;
+}
+
+.Look {
+  display: flex;
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+#Lookp {
+  font-size: 32px;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  font-weight: bold;
+  color: #505460;
+}
+
+.Exp {
+  box-sizing: content-box;
+  width: 92%;
+  height: auto;
+  background-color :rgb(255, 255, 255);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.Expcontainer {
+  box-sizing: content-box;
+  width: 100%;
+  display: flex;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  margin-left: 45px;
+  margin-right: 45px;
+  align-items: center;
+}
+
+.ExpthisM {
+  box-sizing: content-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#Cardimg {
+  padding-left: 1%;
+  width: 11%;
+  margin-right: 5%;
+}
+
+.newthing {
+  box-sizing: content-box;
+  display: flex;
+  width: 265px;
+  height: 65px;
+  background-color :#E9F3FF;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.Acc {
+  box-sizing: content-box;
+  width: 92%;
+  height: auto;
+  background-color :rgb(255, 255, 255);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+}
+
+.Acclist {
+  box-sizing: content-box;
+  display: flex;
+  width: 100%;
+  margin-top: 4.5%;
+  margin-bottom: 4.5%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.AccA {
+  width: 100%;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #505460;
+}
+
+.AccB {
+  width: 100%;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #505460;
+  border-left: 3.5px solid rgb(241, 241, 243);
+  border-right: 3.5px solid rgb(241, 241, 243);
+}
+
+.Custom {
+  box-sizing: content-box;
+  width: 92%;
+  height: auto;
+  background-color :rgb(255, 255, 255);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+#today {
+  font-size: 28px;
+  margin-top: 1%;
+  margin-bottom: 0;
+}
+
+.Ctoday {
+  flex-direction: column;
+  margin-top: 45px;
+  margin-left: 45px;
+  margin-right: 45px;
+}
+
+.CustomList {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  margin-bottom: 45px;
+  margin-left: 45px;
+  margin-right: 45px;
+}
+
+#prepared {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 2%;
+  margin-bottom: 1%;
+}
+
+.CL {
+  display: flex;
+  height: auto;
+  align-items: center;
+}
+
+.customimg {
+  width: 8%;
+  margin-left: 1%;
+  margin-right: 4.5%;
+}
+
+.clname {
+  font-size: 32px;
+  width: 100%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-weight: bold;
+  color: #505460;
+}
+
+#cardimg {
+  position: relative;
+  left: 5px;
+}
+
+#newsimg {
+  height: 60%;
+}
+
+.news {
+  width: 100%;
+  font-size: 25px;
+}
+
+.arrow {
+  display: flex;
+  font-size: 35px;
+  font-weight: bold;
+  color: #B7BBBE;
+  justify-content: center;
+  margin: 0;
+}
+
+.menu {
+  box-sizing: content-box;
+  display: flex;
+  width: 828px;
+  height: 110px;
+  background-color:white;
+  position: fixed;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 2px solid #F3F4F6;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  bottom: 0;
+}
+
+.menuname {
+  position: absolute;
+  bottom: 11%;
+}
+
+.home {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+#homeimg {
+  position: relative;
+  top: 16%;
+  left:3%
+}
+
+.benefit {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+#benefitimg {
+  position: relative;
+  top: 18%;
+  height: 35%;
+  left: 1%;
+}
+
+.tspay {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+#shoppingimg {
+  position: relative;
+  top: 16%;
+}
+
+.stockchart {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+#stockchartimg {
+  position: absolute;
+  bottom: 45%;
+  right: 23.75%;
+  height: 37%;
+}
+
+.whole {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+#listimg {
+  position: relative;
+  top: 17%;
+  height: 37%;
+  left: 4%;
+}
