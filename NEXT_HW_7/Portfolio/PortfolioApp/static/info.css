@@ -17,17 +17,22 @@ header {
   height: 10vh;
   width: 100%; 
   background-color: black;
+  border-bottom: 2px white double;
 }
 
 #name {
   display: flex;
   width: 100%;
   display: flex;
-  align-items: flex-end;
+  align-items: end;
 }
 
 #cj {
   color: white;
+  margin-left: 7%;
+  margin-top: 0;
+  margin-bottom: 1%;
+  font-size: 25px;
 }
 
 .menu {
@@ -35,6 +40,7 @@ header {
   width: 100%;
   align-items: end;
   justify-content: space-around;
+  margin-bottom: 1%;
 }
 
 .main {
@@ -44,6 +50,11 @@ header {
 }
 
 #maintext {
+  background-image: url('../static/marble.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
   display: flex;
   width: 100%;
   height: 90vh;
@@ -51,9 +62,14 @@ header {
   align-items: flex-start;
   justify-content: center;
   font-size: xx-large;
-  background-color: white;
-  opacity: 0.6;
-  gap: 30px;
+  gap: 40px;
+  z-index: 1;
+}
+
+#maintext span{
+  z-index: 2;
+  background: white;
+  margin-left: 7%;
 }
 
 #background {

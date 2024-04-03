@@ -12,21 +12,27 @@
   <div class="page">
     <header>
       <div id="name">
-        <p>조철종</p>
+        <p id="cj">Cheoljong Cho</p>
       </div>
       <div class="menu">
-        <div><a href="">about</a></div>
-        <div><a href="project.html">project</a></div>
+        <div><a href="{% url 'info' %}">info</a></div>
+        <div><a href="{% url 'project' %}">project</a></div>
         <div><a href="">picture</a></div>
         <div><a href="">contact</a>
       </div>
     </header>
+    <div id="Projects">Projects</div>
     <div class="contents">
-      <div id="instagram">
-        <img src="../../../../../../NEXT/Session2/HW2.png" alt="이미지 업로드 실패">
+      <div class="item">
+        <img class="itemimg" src="{% static 'instaclone.png' %}" alt="이미지 업로드 실패">
+        <div><span>Instagram Clone Coding</span></div>
       </div>
-      <div id="toss">
-        <img src="../../../../NEXT_HW_5/클론코딩 과제.png" alt="이미지 업로드 실패">
+      <div class="item">
+        <img class="itemimg" src="{% static 'tossclone.png' %}" alt="이미지 업로드 실패">
+        <div><span>Toss Clone Coding</span></div>
+      </div>
+      <div class="item">
+
       </div>
     </div>
   </div>
