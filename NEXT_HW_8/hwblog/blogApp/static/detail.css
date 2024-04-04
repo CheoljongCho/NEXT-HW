@@ -1,0 +1,42 @@
+body{
+  width: 100vw; 
+  height: 100vh;
+  margin: 0;
+  padding: 0; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: bisque;
+}
+
+.main {
+  width: 600px;
+  height: auto;
+  display: flex;
+  margin-bottom: 10vh;
+  padding-bottom: 20px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+  border: 3px solid black;
+  border-top-left-radius: 6%;
+  border-top-right-radius: 6%;
+  border-bottom-left-radius: 6%;
+  border-bottom-right-radius: 6%;
+}
+
+span {
+  font-size: 10px;
+}
+
+#bottombutton {
+  padding: 3px;
+  background-color: white;
+  border: 1px solid black;
+  border-top-left-radius: 8%;
+  border-top-right-radius: 8%;
+  border-bottom-left-radius: 8%;
+  border-bottom-right-radius: 8%;
+}

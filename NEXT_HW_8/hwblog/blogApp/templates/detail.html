@@ -1,21 +1,27 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}" />
   <title>Article</title>
 </head>
 <body>
+  <div class="main">
   <h2>글 상세 페이지</h2>
   <div>
     <h3>제목</h3>
     <div>{{ article.title }}</div>
-    <span>글 작성 시간: {{ article.reg_time }}</span>
+    <span>{{ article.reg_time }}</span>
   </div>
   <div>
     <h3>내용</h3>
     <div>{{ article.content }}</div>
   </div>
-  <a href="{% url 'list' %}">전체 목록으로 돌아가기</a>
+  <br>
+  <div id="bottombutton"><a href="{% url 'list' %}">전체 목록으로 돌아가기</a></div>
+  </div>
 </body>
 </html>
