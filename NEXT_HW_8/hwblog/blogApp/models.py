@@ -11,6 +11,7 @@ class Article(models.Model):
     ('none', '기타'),
   ]
   category = models.CharField(max_length=20, choices=CATEGORY_CHOICES)
+  reg_time = models.DateTimeField(auto_now_add=True)
   
   def __str__(self):
     return self.title

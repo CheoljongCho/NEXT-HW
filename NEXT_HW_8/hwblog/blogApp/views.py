@@ -17,8 +17,12 @@ def new(request):
   return render(request, 'new.html', {'categories': Article.CATEGORY_CHOICES})
 
 def list(request):
+  categories = Article.CATEGORY_CHOICES
+  category_counts = {}
+  for category in categories:
+      category_counts[category[0]] = Article.objects.filter(category=category[0]).count() 
   articles = Article.objects.all()
-  return render(request, 'list.html', {'articles': articles, 'categories': Article.CATEGORY_CHOICES})
+  return render(request, 'list.html', {'articles': articles, 'categories': categories, 'category_counts': category_counts})
 
 def detail(request, article_id):
   article = Article.objects.get(id = article_id)
