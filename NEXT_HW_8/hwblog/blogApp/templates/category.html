@@ -13,6 +13,7 @@
   <h2>카테고리: {{ category }}</h2>
   <div>글 목록
     <div>{{ total_articles }} </div>
+    글 갯수: {{ articles.count }}
   <ul>
     {% for article in articles %}
     <li><a href="{% url 'detail' article.id %}">{{ article.title }}</a></li>

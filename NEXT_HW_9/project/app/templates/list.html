@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'list.css' %}" />
+  <title>To Do List</title>
+</head>
+<body>
+  <div>
+    <h1>To Do List</h1>
+  </div>
+  <div class="main">
+    <div id="category">
+      <div class="bigbox">
+        <h2>카테고리</h2>
+      </div>
+    </div>
+    <div id="board">
+      <div class="bigbox">
+        <h2>할 일</h2>
+      </div>
+      <a href="{% url 'new' %}" style="margin: 10px;">새로운 할 일</a>
+      <div>
+        <h3>목록</h3>
+        {% for post in posts %}
+        <div class="dobox">
+          <div class="posttitle">
+            <div id="title">
+              <a href="{% url 'detail' post.pk %}">{{ post.title }}</a>
+            </div>
+            <div>
+              <span id="dday">
+                {{ post.duedate }}
+                <br>
+                (D-{{ post.Dday }})
+              </span>
+            </div>
+          </div>
+          <div>{{ post.content }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</body>
+<footer><img src="{% static 'atlas.jpg' %}" class="atlas"></footer>
+</html>

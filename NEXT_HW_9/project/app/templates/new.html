@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'new.css' %}" />
+  <title>new</title>
+</head>
+<body>
+  <div>
+    <h1>To Do List</h1>
+  </div>
+  <div class="main">
+    <div id="category">
+      <div class="bigbox">
+        <h2>카테고리</h2>
+      </div>
+    </div>
+    <div id="board">
+      <div class="bigbox">
+        <h2>할 일</h2>
+      </div>
+      <a href="{% url 'list' %}" style="margin: 10px;">돌아가기</a>
+      <div class="dobox">
+        <h3>새로운 할 일</h3>
+        <br>
+        <form action="/new" method="post">
+          {% csrf_token %}
+          <div>
+            <div>글 제목:</div>
+            <input type="text" name="title" />
+          </div>
+          <br>
+          <div>
+            <div>글 내용:</div>
+            <textarea name="content" cols="100" rows="10"></textarea>
+          </div>
+          <br>
+          <div>
+            <div for="duedate">마감일:</div>
+            <input type="date" id="duedate" name="duedate">
+          </div>
+          <br>
+          <button type="submit">등록</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+<footer><img src="{% static 'atlas.jpg' %}" class="atlas"></footer>
+</html>
