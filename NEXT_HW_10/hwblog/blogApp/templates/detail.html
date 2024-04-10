@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}" />
+  <title>Article</title>
+</head>
+<body>
+  <div class="main">
+    <h2>글 상세 페이지</h2>
+    <div>
+      <h3>제목</h3>
+      <div>{{ article.title }}</div>
+      <span>{{ article.reg_time }}</span>
+    </div>
+    <div>
+      <h3>내용</h3>
+      <div>
+        {{ article.content }}
+      </div>
+    </div>
+    <br>
+    {% for comment in article.comments.all %}
+    <li>{{comment.content}}
+      <a href={% url 'delete_comment' article.id comment.id %}>삭제</a>
+
+      {% for adcomment in comment.adcomments.all %}
+      <li>{{adcomment.adcontent}}
+        <a href="{% url 'delete_adcomment' article.id comment.id adcomment.id %}">삭제</a>
+      </li>
+      {% endfor %}
+      &nbsp; &nbsp;
+      <form method="POST">
+        {% csrf_token %}
+        대댓글 작성
+        <input type="hidden" name="comment_id" value="{{ comment.id }}">
+        <input type="text" name="adcontent" placeholder="대댓글 입력" />
+        <button type="submit">작성</button>
+      </form>
+
+      &nbsp;
+    </li>
+    {% endfor %}
+    <br>
+    <form method="POST">
+      {% csrf_token %}
+      댓글 작성
+      <input type="text" name="content" placeholder="댓글 입력" />
+      <button type="submit">작성</button>
+    </form>
+    <br>
+    <button>
+      <a href="{% url 'delete' article.id %}">
+        삭제
+      </a>
+    </button>
+    <div id="bottombutton">
+      <a href="{% url 'list' %}">
+        전체 목록으로 돌아가기
+      </a>
+    </div>
+  </div>
+</body>
+</html>
