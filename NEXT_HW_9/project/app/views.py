@@ -53,3 +53,6 @@ def delete(request, post_pk):
   
   return redirect('list')
   
+  
+def base(request):
+  return render(request, 'base.html')

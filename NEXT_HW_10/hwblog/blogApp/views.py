@@ -64,3 +64,6 @@ def category(request, category_id):
   articles = Article.objects.filter(category=category_id)
   category_name = dict(Article.CATEGORY_CHOICES)[category_id]
   return render(request, 'category.html', {'articles':articles, 'category': category_name})
+
+def base(request):
+  return render(request, 'base.html')
