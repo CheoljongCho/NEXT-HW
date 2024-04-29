@@ -25,7 +25,7 @@ urlpatterns = [
     path('detail/<int:article_id>', views.detail, name='detail'),
     path('category/<str:category_id>', views.category, name='category'),
     path('delete/<int:article_id>', views.delete, name='delete'),
-    path('delete-comment/<int:article_id>/<int:comment_id>',views.delete_comment, name='delete_comment'),
-    path('delete-adcomment/<int:article_id>/<int:comment_id>/<int:adcomment_id>',views.delete_adcomment, name='delete_adcomment'),
+    path('delete-comment/<int:article_id>/<int:comment_id>',views.delete_comment, name='delete-comment'),
+    path('delete-reply/<int:article_id>/<int:comment_id>/<int:reply_id>',views.delete_reply, name='delete-reply'),
     path('base', views.base, name='base'),
 ]

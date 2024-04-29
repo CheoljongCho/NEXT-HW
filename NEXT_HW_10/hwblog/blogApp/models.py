@@ -1,4 +1,9 @@
 from django.db import models
+from django.contrib.auth.models import (
+  AbstractBaseUser,
+  BaseUserManager,
+  PermissionsMixin,
+)
 
 # Create your models here.
 class Article(models.Model):
@@ -15,17 +20,21 @@ class Article(models.Model):
   def __str__(self):
     return self.title
   
+  def comment_count(self):
+    return self.comments.filter(is_deleted=False).count()
+  
 class Comment(models.Model):
   article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='comments')
   content = models.TextField()
+  is_deleted = models.BooleanField(default=False)
   
   def __str__(self):
     return self.content
   
-class adComment(models.Model):
-  comment = models.ForeignKey(Comment, on_delete=models.CASCADE, related_name='adcomments')
-  adcontent = models.TextField()
+class Reply(models.Model):
+  content = models.TextField()
+  comment = models.ForeignKey(Comment, on_delete=models.CASCADE, related_name='replies')
   
   def __str__(self):
-    return self.adcontent
-  
+    return self.content
+

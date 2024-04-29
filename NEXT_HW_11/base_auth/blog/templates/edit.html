@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block title %} Edit!{% endblock %} {% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'edit.css' %}" />
+{% endblock %} {% block content %}
+<div class="edit-post_container">
+  <form method="POST" action="">
+    {% csrf_token %}
+    <input
+      type="text"
+      value="{{post.title}}"
+      name="title"
+      placeholder="수정할 제목!"
+    />
+    <textarea name="content" placeholder="수정할 내용!">
+      {{post.content}}
+    </textarea>
+    <label for="username">사용자 이름:</label>
+    <input type="text" name="username" value="{{ last_user }}">
+    <br>
+    <label for="access_time">마지막 접속 시간:</label>
+    <input type="datetime-local" name="access_time" value="{{ last_access_time }}">
+    <br>
+    <input id="edit-post_btn" type="submit" value="수정하기" />
+  </form>
+</div>
+{% endblock %}
