@@ -8,6 +8,7 @@ requests = "*"
 bs4 = "*"
 selenium = "*"
 django = "*"
+django-allauth = "*"
 
 [dev-packages]
 
