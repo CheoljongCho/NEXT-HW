@@ -43,3 +43,9 @@ li{
 HINT: color, border-color, transform, box-shadow 속성을 건드리세요
 
 */
+
+.playing{ 
+   border-color: yellow; 
+   transform: scale(1.1);
+   box-shadow: 0px 5px 5px 0;
+}
