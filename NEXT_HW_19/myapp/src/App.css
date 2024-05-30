@@ -1,38 +1,103 @@
-.App {
+/* App.css */
+
+/* 중앙에 점선 테두리를 가진 큰 직사각형 스타일 */
+
+.wrapper {
+  width: 70%; /* 너비를 조금 더 넓게 조정 */
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px dashed #000;
+  background-color: #f8f8f8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* 고봉밥 전체 */
+.rice-bowl {
+  position: relative;
+  background-color: #fff;
+}
+
+/* Top layer of rice */
+.rice-layer-top {
+  background-image: url('../public/rice-layer-top.png'); /* Top layer image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100px; /* 높이 조정 */
+}
+
+/* Todolist 내용 공간의 배경 이미지 */
+nav ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Todolist 줄마다 이미지 덧씌우기 */
+nav ol li {
+  padding: 10px;
+  margin: 0; /* 여백 제거 */
+  background-image: url('../public/rice-layer-middle.png'); /* Middle layer image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.8); /* 내용이 보이도록 반투명 배경 */
+  border: 1px solid #ccc;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+/* 각 todolist 줄 클릭 시 상세 내용 표시 */
+article {
+  background-image: url('../public/rice-layer-bottom.png'); /* 그릇 이미지 경로 */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 0; /* 여백 제거 */
+  height: 40vh;
+}
+
+/* 공통 스타일 */
+h1, h2 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.subtitle {
+  text-align: center;
+  font-style: italic;
+  color: #555;
+  margin-top: 10px;
+  font-size: 1.1em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type="text"], textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  background-color: #007BFF;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  background-color: #0056b3;
 }
