@@ -1,0 +1,68 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title img {
+  max-width: 100%;
+}
+
+.about-btn {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.post {
+  width: calc(33.33% - 20px); /* 3개의 포스트가 가로로 정렬되게 설정 */
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.post img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.post img:hover {
+  transform: scale(1.05);
+}
+
+.post-title {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* 반응형 스타일링 */
+@media screen and (max-width: 768px) {
+  .post {
+      width: calc(50% - 20px); /* 화면이 작아지면 2개의 포스트가 가로로 정렬되게 설정 */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .post {
+      width: 100%; /* 화면이 아주 작아지면 한 개의 포스트가 한 줄에 나타나도록 설정 */
+  }
+}
