@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom';
 const Home = ({ posts }) => {
     return (
         <div>
-            <Link to="/" className="home-btn">영화관</Link>
             <div className="post-list">
                 {posts.map(post => (
                     <Link to={`/post/${post.id}`} key={post.id} className="post">
-                        <img src={post.images[0]} alt={post.title} />
+                        <div 
+                            className="post-thumbnail"
+                            style={{ backgroundImage: `url(${post.images[0]})` }}
+                        />
                         <p className="post-title">{post.title}</p>
                     </Link>
                 ))}

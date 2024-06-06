@@ -16,7 +16,10 @@ body {
 }
 
 .title img {
-  max-width: 100%;
+  background-image: url('./assets/camera.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .about-btn {
@@ -35,17 +38,31 @@ body {
   width: calc(33.33% - 20px); /* 3개의 포스트가 가로로 정렬되게 설정 */
   margin-bottom: 20px;
   cursor: pointer;
+  position: relative; /* 썸네일과 프레임을 겹치게 하기 위해 필요 */
 }
 
-.post img {
-  width: 100%;
-  height: auto;
+.post-thumbnail {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;
   border-radius: 5px;
-  transition: transform 0.3s ease;
+  position: relative;
 }
 
-.post img:hover {
-  transform: scale(1.05);
+.post-thumbnail::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/filmframe.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
 }
 
 .post-title {

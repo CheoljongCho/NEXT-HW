@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
-import About from './pages/About';
 import Post from './pages/Post';
 import PostForm from './components/PostForm';
 import { getPostsFromLocalStorage, savePostsToLocalStorage } from './utils';
 import './App.css'; // 스타일 파일 불러오기
+import { Link } from 'react-router-dom';
 
 const App = () => {
     const [posts, setPosts] = useState([]);
@@ -39,11 +39,12 @@ const App = () => {
         <Router>
             <div className="container"> {/* 컨테이너 클래스 추가 */}
                 <div className="title"> {/* 타이틀 클래스 추가 */}
-                    <img src="/camera.png" alt="영화관" /> {/* 이미지 경로 수정 */}
+                    <div className="title img">
+                        <Link to="/" className="home-btn">영화관</Link> 
+                    </div>
                 </div>
                 <Routes>
                     <Route path="/" element={<Home posts={posts} />} /> {/* 변경: Home 컴포넌트에 포스트 전달 */}
-                    <Route path="/about" element={<About />} />
                     <Route 
                         path="/post/:id" 
                         element={<Post 

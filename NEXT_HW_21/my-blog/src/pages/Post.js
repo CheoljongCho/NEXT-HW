@@ -69,45 +69,44 @@ const Post = ({ posts, onUpdate, onDelete }) => {
     };
 
     return (
-      <div>
-          <Link to="/" className="home-btn">영화관</Link> {/* 홈 버튼 추가 */}
-          {post ? (
-              <div>
-                  {isEditing ? (
-                      <div>
-                          <input type="text" value={editTitle} onChange={(e) => setEditTitle(e.target.value)} />
-                          <textarea value={editContent} onChange={(e) => setEditContent(e.target.value)} />
-                          <button onClick={handleEditPost}>Save</button>
-                          <button onClick={() => setIsEditing(false)}>Cancel</button>
-                      </div>
-                  ) : (
-                      <div>
-                          <h1>{post.title}</h1>
-                          <p>{post.content}</p>
-                          <button onClick={() => setIsEditing(true)}>Edit Post</button>
-                      </div>
-                  )}
-                  <div>
-                      {post.images.map((src, index) => (
-                          <img
-                              key={index}
-                              ref={(el) => (imgRefs.current[index] = el)}
-                              src={src}
-                              alt={`Post ${post.id} - ${index}`}
-                              width="200"
-                              onClick={() => handleImageClick(index)}
-                          />
-                      ))}
-                  </div>
-                  <button onClick={handleDeletePost}>Delete Post</button>
-                  <CommentList comments={post.comments} onDelete={deleteComment} onEdit={editComment} />
-                  <CommentForm onAdd={addComment} />
-              </div>
-          ) : (
-              <div>Loading...</div>
-          )}
-      </div>
-  );
+        <div>
+            {post ? (
+                <div>
+                    {isEditing ? (
+                        <div>
+                            <input type="text" value={editTitle} onChange={(e) => setEditTitle(e.target.value)} />
+                            <textarea value={editContent} onChange={(e) => setEditContent(e.target.value)} />
+                            <button onClick={handleEditPost}>Save</button>
+                            <button onClick={() => setIsEditing(false)}>Cancel</button>
+                        </div>
+                    ) : (
+                        <div>
+                            <h1>{post.title}</h1>
+                            <p>{post.content}</p>
+                            <button onClick={() => setIsEditing(true)}>Edit Post</button>
+                        </div>
+                    )}
+                    <div>
+                        {post.images.map((src, index) => (
+                            <img
+                                key={index}
+                                ref={(el) => (imgRefs.current[index] = el)}
+                                src={src}
+                                alt={`Post ${post.id} - ${index}`}
+                                width="200"
+                                onClick={() => handleImageClick(index)}
+                            />
+                        ))}
+                    </div>
+                    <button onClick={handleDeletePost}>Delete Post</button>
+                    <CommentList comments={post.comments} onDelete={deleteComment} onEdit={editComment} />
+                    <CommentForm onAdd={addComment} />
+                </div>
+            ) : (
+                <div>Loading...</div>
+            )}
+        </div>
+    );
 };
 
 export default Post;
